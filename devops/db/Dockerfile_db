@@ -1,0 +1,10 @@
+FROM mdillon/postgis
+
+RUN sed -i -e 's/# es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+ENV LANG es_ES.UTF-8
+ENV LANGUAGE es_ES:en
+ENV LC_ALL es_ES.UTF-8
+
+RUN export DJANGO_READ_DOT_ENV_FILE=True
+
