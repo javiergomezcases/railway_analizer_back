@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+ db:
+  build:
+    context: ""
+    dockerfile: Dockerfile_db
+  image: ra_db
+  ports:
+    - "5432:5432"
+  env_file:
+    - ../../.envs/local/.secrets
+    - ../../.envs/local/.vars
