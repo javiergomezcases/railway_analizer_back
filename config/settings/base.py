@@ -36,7 +36,7 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
-
+    'app.base_data'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
